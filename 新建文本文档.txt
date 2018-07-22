@@ -1,0 +1,23 @@
+  private void SendTTO1_by(string var,string Codecontent)
+        {
+
+            string strCommand;
+            strCommand = "01 00 46 00 69 00 6C 00 6C 00 53 00 65 00 72 00 69 00 61 00 6C 00 56 00 61 00 72 00 3D 00 02 00 ";                   //第一行
+          //  strCommand += cm.StrTo16Str("S1").ToString() + "  "; //变量名字 S1   (53 00 31 00) 
+            strCommand += cm.StrTo16Str(var).ToString() + "  ";
+            strCommand += " 03 00 2C 00 02 00 ";
+          strCommand += cm.StrTo16Str(Codecontent).ToString(); //内容
+           // strCommand += "53 62 70 53 3A 67";     //内容：打印机3个汉字
+            strCommand += " 03 00 17 00 ";
+            SetText("向TTO1发送数据" + Codecontent);
+            SetText("向TTO1发送数据" + strCommand);
+            string strtemp = cm.StrTo16Str(Codecontent.Replace(" ", ""));// 
+            if (workStream_TTO1 != null)
+            {
+                byte[] data = cm.HexStringToByteArray(strCommand);
+                workStream_TTO1.Write(data, 0, data.Length);
+               // SetText("向TTO1发送数据" + strCommand);
+                //  SetText("向TTO1发送数据" + Codecontent);      
+            }
+
+        }

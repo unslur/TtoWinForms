@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96436419-A544-42F1-A77D-5FAAD3A6608C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tto</RootNamespace>
+    <AssemblyName>Tto</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>..\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.3.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.3.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.3.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.82.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\System.Data.SQLite\2013\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_yaocai_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_yaocai_base.Designer.cs">
+      <DependentUpon>add_yaocai_base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_yaocai_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_yaocai_check.Designer.cs">
+      <DependentUpon>add_yaocai_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_yaocai_more.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_yaocai_more.Designer.cs">
+      <DependentUpon>add_yaocai_more.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_yinpian_assist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_yinpian_assist.Designer.cs">
+      <DependentUpon>add_yinpian_assist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_yinpian_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_yinpian_base.Designer.cs">
+      <DependentUpon>add_yinpian_base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_yinpian_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_yinpian_check.Designer.cs">
+      <DependentUpon>add_yinpian_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_yinpian_more.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_yinpian_more.Designer.cs">
+      <DependentUpon>add_yinpian_more.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CircularProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="exitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exitForm.Designer.cs">
+      <DependentUpon>exitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="func.cs" />
+    <Compile Include="MainWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWin.Designer.cs">
+      <DependentUpon>MainWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifyDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifyDevice.Designer.cs">
+      <DependentUpon>modifyDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modify_yaocai_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modify_yaocai_base.Designer.cs">
+      <DependentUpon>modify_yaocai_base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modify_yaocai_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modify_yaocai_check.Designer.cs">
+      <DependentUpon>modify_yaocai_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modify_yaocai_more.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modify_yaocai_more.Designer.cs">
+      <DependentUpon>modify_yaocai_more.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modify_yinpian_assist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modify_yinpian_assist.Designer.cs">
+      <DependentUpon>modify_yinpian_assist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modify_yinpian_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modify_yinpian_base.Designer.cs">
+      <DependentUpon>modify_yinpian_base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modify_yinpian_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modify_yinpian_check.Designer.cs">
+      <DependentUpon>modify_yinpian_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modify_yinpian_more.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modify_yinpian_more.Designer.cs">
+      <DependentUpon>modify_yinpian_more.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myUser.cs" />
+    <Compile Include="normalPrinter.cs" />
+    <Compile Include="printerSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printerSetting.Designer.cs">
+      <DependentUpon>printerSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintStatus.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Task.cs" />
+    <Compile Include="TaskFunc.cs" />
+    <Compile Include="Ttologin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ttologin.Designer.cs">
+      <DependentUpon>Ttologin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TtoPrinter.cs" />
+    <Compile Include="verify.cs" />
+    <Compile Include="WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Win32.cs" />
+    <Compile Include="yaocai_name_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yaocai_name_base.Designer.cs">
+      <DependentUpon>yaocai_name_base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yinpian_fenbao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yinpian_fenbao.Designer.cs">
+      <DependentUpon>yinpian_fenbao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yinpian_name_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yinpian_name_base.Designer.cs">
+      <DependentUpon>yinpian_name_base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yinpian_yaocai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yinpian_yaocai.Designer.cs">
+      <DependentUpon>yinpian_yaocai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yinpian_yuanyaocai_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yinpian_yuanyaocai_base.Designer.cs">
+      <DependentUpon>yinpian_yuanyaocai_base.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="add_yaocai_base.resx">
+      <DependentUpon>add_yaocai_base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_yaocai_check.resx">
+      <DependentUpon>add_yaocai_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_yaocai_more.resx">
+      <DependentUpon>add_yaocai_more.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_yinpian_assist.resx">
+      <DependentUpon>add_yinpian_assist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_yinpian_base.resx">
+      <DependentUpon>add_yinpian_base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_yinpian_check.resx">
+      <DependentUpon>add_yinpian_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_yinpian_more.resx">
+      <DependentUpon>add_yinpian_more.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exitForm.resx">
+      <DependentUpon>exitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWin.resx">
+      <DependentUpon>MainWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifyDevice.resx">
+      <DependentUpon>modifyDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modify_yaocai_base.resx">
+      <DependentUpon>modify_yaocai_base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modify_yaocai_check.resx">
+      <DependentUpon>modify_yaocai_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modify_yaocai_more.resx">
+      <DependentUpon>modify_yaocai_more.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modify_yinpian_assist.resx">
+      <DependentUpon>modify_yinpian_assist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modify_yinpian_base.resx">
+      <DependentUpon>modify_yinpian_base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modify_yinpian_check.resx">
+      <DependentUpon>modify_yinpian_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modify_yinpian_more.resx">
+      <DependentUpon>modify_yinpian_more.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printerSetting.resx">
+      <DependentUpon>printerSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ttologin.resx">
+      <DependentUpon>Ttologin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yaocai_name_base.resx">
+      <DependentUpon>yaocai_name_base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yinpian_fenbao.resx">
+      <DependentUpon>yinpian_fenbao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yinpian_name_base.resx">
+      <DependentUpon>yinpian_name_base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yinpian_yaocai.resx">
+      <DependentUpon>yinpian_yaocai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yinpian_yuanyaocai_base.resx">
+      <DependentUpon>yinpian_yuanyaocai_base.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\96f08e336e398e97f01b8728e3a783e9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5783ee8f19d77d2b3f2ec1b123251af9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7690b5ec0692bfe7e63b128497e51147.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\933053e9ac0ed720885826df8e7215e4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a9d68cf1485336b2a861f3678e61bb38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e35ba9b15ba42a3b6b19227b91835734.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dsfsf.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backg.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginIn.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c580e8431d52eaf1a458a465e53c62df.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0329140005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AtaZZLS9cVtKOxr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\141945.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9d887e4317d97fca14e97439e5bdcc03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BaiduShurufa_2014-7-21_11-26-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenMain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19885c3c870e8c39031365159045ba3b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainhead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10304085.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d9596430487cde48cb121ff012430ca4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cogwheel25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) C:\Users\Public\Documents</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
